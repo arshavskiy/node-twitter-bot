@@ -28,6 +28,4 @@ function tweetIt(text) {
             console.log("folower found");
         }
     }
-});
-
-}
+};
