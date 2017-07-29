@@ -9,7 +9,7 @@ setInterval(getMePosts, 1000 * 10);
 function getMePosts() {
     let params = {
         q: 'putin',
-        count: 100
+        count: 10
     }
 
     T.get('search/tweets', params, gotData);
