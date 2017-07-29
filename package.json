@@ -1,0 +1,15 @@
+{
+  "name": "twit_bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pavel",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ajax-request": "^1.2.3",
+    "twit": "^2.2.9"
+  }
+}
