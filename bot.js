@@ -4,22 +4,22 @@ const fs = require('fs');
 
 let T = new Twit(config);
 
-setInterval(getMePosts, 1000 * 10);
+// setInterval(getMePosts, 1000 * 60);
+
+getMePosts();
 
 function getMePosts() {
     let params = {
-        q: 'putin',
-        count: 10
+        q: 'ufo',
+        count: 1000
     }
-
     T.get('search/tweets', params, gotData);
 
     function gotData(err, data, response) {
-
         let tweets = data.statuses;
-
         for (var i = 0; i < tweets.length; i++) {
-            fs.appendFile('putin.txt', tweets[i].text + '\n', (err) => {
+            console.log('we found ' + i);
+            fs.appendFile('./found/ufo.txt', tweets[i].text + '\n', 'utf8', (err) => {
                 if (err) throw err;
             });
         }
