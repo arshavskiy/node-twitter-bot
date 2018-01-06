@@ -4,7 +4,7 @@ const request = require('ajax-request');
 
 let T = new Twit(config);
 
-setInterval(twitIt, 1000 * 10800);
+setInterval(twitIt, 1000 * 60*60);
 
 function twitIt() {
     request('http://api.icndb.com/jokes/random/', function (err, res, body) {
